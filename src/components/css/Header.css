@@ -1,0 +1,25 @@
+.Wrap {
+   width: 100%;
+   background-color: rgb(255, 221, 227);
+}
+.Header {
+   width: 1200px;
+   margin: 0 auto;
+   height: 200px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+.Header h1 {
+   font-size: 96px;
+   color: rgba(90, 90, 90, 0.548);
+}
+
+.Header .icon {
+   width: 90px;
+   height: 90px;
+   position: absolute;
+   right: 50px;
+   text-align: center;
+}

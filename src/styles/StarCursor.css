@@ -1,0 +1,21 @@
+.falling-star {
+   position: fixed;
+   font-size: 20px;
+   pointer-events: none;
+   z-index: 9999;
+   animation: fall 1.2s ease-out forwards;
+   transform: translate(-50%, -50%) translateY(120px) scale(0.5);
+}
+.falling-star::after {
+   content: '★';
+}
+@keyframes fall {
+   0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(120px) scale(0.5);
+   }
+}

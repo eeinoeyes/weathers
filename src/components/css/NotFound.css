@@ -1,0 +1,19 @@
+.Notfound {
+   width: 1200px;
+   margin: 0 auto;
+   color: rgb(44, 44, 44);
+}
+.Notfound .top {
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+   height: 50vh;
+}
+.Notfound .bottom {
+   text-align: center;
+   padding-top: 100px;
+}
+
+.Notfound .bottom a:hover {
+   color: rgb(255, 109, 133);
+}
