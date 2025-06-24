@@ -5,6 +5,7 @@
    flex-direction: row;
    align-items: center;
    justify-content: center;
+   padding: 40px 0;
 }
 .mySwiper.bookmark .card {
    width: 1200px;
@@ -12,6 +13,9 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 30px;
-   height: 120px;
+   height: 150px;
+   background-color: rgb(228, 228, 228);
+}
+.mySwiper.bookmark .card h1 {
+   padding: 0 30px;
 }

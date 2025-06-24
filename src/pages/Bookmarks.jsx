@@ -32,8 +32,9 @@ function Bookmarks() {
                   }}
                   modules={[Pagination]}
                   slidesPerView={4}
+                  spaceBetween={40}
                   className="mySwiper bookmark"
-                  style={{ height: '60vh' }}
+                  style={{ height: '800px' }}
                >
                   {bookmarks.map((data) => (
                      <SwiperSlide key={data.name} className="card">
