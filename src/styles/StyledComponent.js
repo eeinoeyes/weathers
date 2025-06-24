@@ -5,8 +5,11 @@ export const Wrap = styled.div`
    min-width: ${(props) => props.$minWidth || '1200px'};
 `
 export const Container = styled.div`
-   max-width: 1200px;
+   width: 100%;
+   height: 100vh;
    margin: 0 auto;
+   background-color: white;
+   overflow-y: auto;
 `
 export const Input = styled.input`
    width: 100%;

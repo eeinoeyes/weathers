@@ -3,12 +3,12 @@ import { getWeather, getForecast } from '../api/weatherApi'
 
 export const fetchWeathers = createAsyncThunk('weathers/fetchWeathers', async (city) => {
    const response = await getWeather(city)
-   return response //객체
+   return response.data //객체
 })
 
 export const fetchForecast = createAsyncThunk('weathers/fetchForecast', async (city) => {
    const response = await getForecast(city)
-   return response.list //객체
+   return response.data.list //객체
 })
 
 const weatherSlice = createSlice({

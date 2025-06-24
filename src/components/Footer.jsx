@@ -1,7 +1,8 @@
+import './css/Footer.css'
 function Footer() {
    return (
       <div className="Footer">
-         <p>Footer</p>
+         <p style={{ fontSize: '1px' }}>Footer</p>
       </div>
    )
 }

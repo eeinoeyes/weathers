@@ -1,7 +1,10 @@
 @font-face {
-   font-family: 'pretendard';
-   src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2');
+   font-family: 'Pretendard';
+   src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@1.3.6/dist/web/woff2/Pretendard-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
 }
+
 html {
    font-family: 'pretendard';
 }
@@ -10,8 +13,19 @@ html {
 body {
    margin: 0;
    padding: 0;
+   overflow: hidden;
 }
 a {
    text-decoration: none;
    color: inherit;
+}
+.icon:hover {
+   color: rgb(255, 139, 159) !important;
+   cursor: pointer;
+}
+button {
+   border: none;
+   background-color: inherit;
+   padding: 0;
+   margin: 0;
 }

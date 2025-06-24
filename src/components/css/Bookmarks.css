@@ -1,0 +1,17 @@
+.mySwiper.bookmark {
+   height: 100%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+.mySwiper.bookmark .card {
+   width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 30px;
+   height: 120px;
+}
