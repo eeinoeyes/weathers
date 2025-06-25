@@ -8,13 +8,15 @@
    padding: 40px 0;
 }
 .mySwiper.bookmark .card {
-   width: 1200px;
+   width: 60%;
    margin: 0 auto;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 150px;
-   background-color: rgb(228, 228, 228);
+   height: 20%;
+   background-color: rgb(241, 241, 241);
+   border: dashed 2px rgb(206, 206, 206);
+   border-radius: 30px;
 }
 .mySwiper.bookmark .card h1 {
    padding: 0 30px;

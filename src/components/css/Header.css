@@ -1,33 +1,51 @@
 .Wrap {
    width: 100%;
    background-color: rgb(255, 221, 227);
+   overflow: hidden;
 }
 .Header {
    max-width: 1200px;
    margin: 0 auto;
-   height: 200px;
+   height: 20vh;
    display: flex;
-   justify-content: center;
    align-items: center;
+   justify-content: space-between;
    position: relative;
 }
 .Header h1 {
-   font-size: 80px;
-   color: rgba(90, 90, 90, 0.548);
-}
-.Header button {
    position: absolute;
-   transform: translateY(30%);
+   left: 50%;
+   transform: translateX(-50%);
+   white-space: nowrap;
+   font-size: 4rem;
+   color: rgba(90, 90, 90, 0.548);
+   pointer-events: none;
 }
-.Header button.home {
-   right: 100px;
-}
-.Header button.bookmark {
-   right: 20px;
+.Header .buttons {
+   position: absolute;
+   right: 10px;
+   display: flex;
+   align-items: center;
+   gap: 20px;
 }
 .Header .icon {
-   width: 90px;
-   height: 90px;
    text-align: center;
    color: rgba(90, 90, 90, 0.548);
+}
+@media all and (max-width: 819px) {
+   .Header {
+      position: static;
+      justify-content: center;
+      align-items: center;
+   }
+   h1 {
+      display: none;
+   }
+   .Header .buttons {
+      position: static;
+   }
+   button.home p,
+   button.bookmark p {
+      display: none;
+   }
 }

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Input, Container } from '../styles/StyledComponent'
 import Header from '../components/header'
+import Footer from '../components/Footer'
 import '../components/css/Main.css'
 import SearchIcon from '@mui/icons-material/Search'
 import StarCursorEffect from './StarCursorEffect'
@@ -27,6 +28,7 @@ function Main() {
                </button>
             </form>
          </Container>
+         <Footer />
       </div>
    )
 }

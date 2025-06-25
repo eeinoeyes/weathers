@@ -10,12 +10,15 @@ import { Pagination } from 'swiper/modules'
 //swiper
 
 import Header from '../components/header'
+import Footer from '../components/Footer'
+import NotFound from './NotFound'
 import StarCursorEffect from './StarCursorEffect'
 import '../components/css/Bookmarks.css'
 
 function Bookmarks() {
    const bookmarks = useSelector((state) => state.bookmarks)
-   const title = 'Bookmark'
+   const title = 'Bookmarks'
+   const error = '북마크에 저장된 데이터가 없습니다.'
    console.log(bookmarks)
    return (
       <Wrap>
@@ -23,7 +26,7 @@ function Bookmarks() {
          <Header title={title} />
          <Container>
             {bookmarks.length === 0 ? (
-               <p>북마크에 저장된 데이터가 없습니다.</p>
+               <NotFound error={error} />
             ) : (
                <Swiper
                   direction={'vertical'}
@@ -46,6 +49,7 @@ function Bookmarks() {
                </Swiper>
             )}
          </Container>
+         <Footer />
       </Wrap>
    )
 }

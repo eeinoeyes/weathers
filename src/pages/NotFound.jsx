@@ -15,7 +15,7 @@ function NotFound({ error }) {
                Sorry! <br />
                Unable to load data{' '}
             </h2>
-            <p style={{ fontSize: '40px' }}> Error: {error ? error : 'undefined'} </p>
+            <p style={{ fontSize: '40px' }}>{error ? error : 'undefined'} </p>
          </div>
          <div className="bottom">
             <Link to={'/'}>

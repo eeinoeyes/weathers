@@ -68,16 +68,14 @@ function Details() {
             </Grid>
          </Grid>
          <div style={{ height: '40vh' }}>
+            <div style={{ textAlign: 'center', color: 'rgb(190, 190, 190)' }}>forecast</div>
             <Swiper
                slidesPerView={5}
                scrollbar={{
                   hide: false,
                }}
-               pagination={{
-                  type: 'fraction',
-               }}
                navigation={true}
-               modules={[Pagination, Navigation]}
+               modules={[Navigation]}
                className="mySwiper"
             >
                {forecast?.map((data) => {
@@ -85,7 +83,7 @@ function Details() {
                   const time = data.dt_txt.split(' ')[1].slice(0, 5)
                   return (
                      <SwiperSlide key={data.dt}>
-                        <div style={{ padding: '100px' }}>
+                        <div style={{ padding: '50px' }}>
                            <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`} alt={data.weather.description} />
                            <p>
                               {date}, {time}

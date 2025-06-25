@@ -9,16 +9,19 @@ function Header({ title = 'weather dashboard' }) {
       <div className="Wrap">
          <div className="Header">
             <h1>{title}</h1>
-            <button onClick={() => navigate('/')} className="home">
-               <div className="icon">
-                  <HomeIcon style={{ fontSize: '40px' }} /> <p>go Home</p>
-               </div>
-            </button>
-            <button onClick={() => navigate('/bookmarks')} className="bookmark">
-               <div className="icon">
-                  <StarsIcon style={{ fontSize: '40px' }} /> <p>bookmark</p>
-               </div>
-            </button>
+            <div className="buttons">
+               {' '}
+               <button onClick={() => navigate('/')} className="home">
+                  <div className="icon">
+                     <HomeIcon style={{ fontSize: '40px' }} /> <p>go Home</p>
+                  </div>
+               </button>
+               <button onClick={() => navigate('/bookmarks')} className="bookmark">
+                  <div className="icon">
+                     <StarsIcon style={{ fontSize: '40px' }} /> <p>bookmark</p>
+                  </div>
+               </button>
+            </div>
          </div>
       </div>
    )
