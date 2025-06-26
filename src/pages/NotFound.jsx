@@ -2,14 +2,11 @@ import '../components/css/NotFound.css'
 import HomeIcon from '@mui/icons-material/Home'
 import Main from './Main'
 import { Link } from 'react-router-dom'
-import StarCursorEffect from './StarCursorEffect'
 
 function NotFound({ error }) {
    console.log(error)
    return (
       <div className="Notfound">
-         <StarCursorEffect />
-
          <div className="top">
             <h2 style={{ fontSize: '80px' }}>
                Sorry! <br />

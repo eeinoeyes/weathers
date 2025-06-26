@@ -15,7 +15,6 @@ import { Wrap } from '../styles/StyledComponent'
 import NotFound from './NotFound'
 import Header from '../components/header'
 import Footer from '../components/Footer'
-import StarCursorEffect from './StarCursorEffect'
 import { addBookmark, removeBookmark } from '../features/bookmarkSlice'
 import '../components/css/Details.css'
 
@@ -29,6 +28,11 @@ function Details() {
       dispatch(fetchForecast(city))
    }, [dispatch, city])
    const bookmarks = useSelector((state) => state.bookmarks)
+
+   useEffect(() => {
+      localStorage.setItem('bookmarks', JSON.stringify(bookmarks))
+   }, [bookmarks])
+
    const isBookmarked = bookmarks.some((data) => data.name === weathers?.name)
    const toggleBookmark = () => {
       const cityData = {
@@ -44,9 +48,7 @@ function Details() {
    if (error) return <NotFound error={error} />
    return (
       <Wrap>
-         <StarCursorEffect />
-
-         <Header title={weathers?.name} />
+         <Header title={weathers?.name} isBookmarked={isBookmarked} toggleBookmark={toggleBookmark} />
          <Grid container sx={{ maxWidth: '1200px', height: '30vh', margin: '0 auto' }} columns={12} spacing={2} justifyContent="center" alignItems="center">
             <Grid sx={{ gridColumn: 'span 1' }}></Grid>
             <Grid sx={5}>

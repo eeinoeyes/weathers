@@ -5,7 +5,6 @@ import Header from '../components/header'
 import Footer from '../components/Footer'
 import '../components/css/Main.css'
 import SearchIcon from '@mui/icons-material/Search'
-import StarCursorEffect from './StarCursorEffect'
 
 function Main() {
    const [city, setCity] = useState('')
@@ -18,7 +17,6 @@ function Main() {
    }
    return (
       <div>
-         <StarCursorEffect />
          <Header onBookmarks={() => navigate('/bookmarks')} />
          <Container className="Main">
             <form onSubmit={handleChange}>

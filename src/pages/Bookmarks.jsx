@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { Container, Wrap } from '../styles/StyledComponent'
 
@@ -12,21 +12,26 @@ import { Pagination } from 'swiper/modules'
 import Header from '../components/header'
 import Footer from '../components/Footer'
 import NotFound from './NotFound'
-import StarCursorEffect from './StarCursorEffect'
 import '../components/css/Bookmarks.css'
+import ClearIcon from '@mui/icons-material/Clear'
+import { removeBookmark } from '../features/bookmarkSlice'
 
 function Bookmarks() {
+   const dispatch = useDispatch()
    const bookmarks = useSelector((state) => state.bookmarks)
-   const title = 'Bookmarks'
-   const error = '북마크에 저장된 데이터가 없습니다.'
-   console.log(bookmarks)
+
+   const toggleBookmark = (data) => {
+      const isBookmarked = bookmarks.some((bookmark) => bookmark.name === data.name)
+      if (isBookmarked) {
+         dispatch(removeBookmark(data.name))
+      }
+   }
    return (
       <Wrap>
-         <StarCursorEffect />
-         <Header title={title} />
+         <Header title={'Bookmarks'} />
          <Container>
             {bookmarks.length === 0 ? (
-               <NotFound error={error} />
+               <NotFound error={'북마크에 저장된 데이터가 없습니다.'} />
             ) : (
                <Swiper
                   direction={'vertical'}
@@ -44,6 +49,9 @@ function Bookmarks() {
                         <img src={`https://openweathermap.org/img/wn/${data.icon}@4x.png`} style={{ width: '200px', height: '200px' }} />
                         <h2>{data.name}</h2>
                         <h1>{data.temp} °C</h1>
+                        <button onClick={() => toggleBookmark(data)}>
+                           <ClearIcon className="bookmarkIcon" />
+                        </button>
                      </SwiperSlide>
                   ))}
                </Swiper>
