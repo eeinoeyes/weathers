@@ -4,12 +4,13 @@
    overflow: hidden;
 }
 .Header {
+   width: 100%;
    max-width: 1200px;
    margin: 0 auto;
    height: 20vh;
    display: flex;
    align-items: center;
-   justify-content: space-between;
+   justify-content: center;
    position: relative;
 }
 .Header h1 {
@@ -19,7 +20,6 @@
    white-space: nowrap;
    font-size: 4rem;
    color: rgba(90, 90, 90, 0.548);
-   pointer-events: none;
 }
 .Header .buttons {
    position: absolute;
@@ -38,7 +38,7 @@
       justify-content: center;
       align-items: center;
    }
-   h1 {
+   .Header h1 {
       display: none;
    }
    .Header .buttons {

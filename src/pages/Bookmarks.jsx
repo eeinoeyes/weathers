@@ -46,10 +46,10 @@ function Bookmarks() {
                >
                   {bookmarks.map((data) => (
                      <SwiperSlide key={data.name} className="card">
-                        <img src={`https://openweathermap.org/img/wn/${data.icon}@4x.png`} style={{ width: '200px', height: '200px' }} />
+                        <img src={`https://openweathermap.org/img/wn/${data.icon}@4x.png`} style={{ width: '150px', height: '150px' }} />
                         <h2>{data.name}</h2>
                         <h1>{data.temp} °C</h1>
-                        <button onClick={() => toggleBookmark(data)}>
+                        <button onClick={() => toggleBookmark(data)} style={{ borderRadius: '50%', padding: '10px' }}>
                            <ClearIcon className="bookmarkIcon" />
                         </button>
                      </SwiperSlide>

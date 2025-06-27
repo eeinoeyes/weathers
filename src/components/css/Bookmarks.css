@@ -1,23 +1,23 @@
 .mySwiper.bookmark {
    height: 100%;
    margin: 0 auto;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
    padding: 40px 0;
+   overflow-x: hidden;
 }
 .mySwiper.bookmark .card {
-   width: 60%;
+   width: 80%;
+   max-width: 1200px;
    margin: 0 auto;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 20%;
-   background-color: rgb(241, 241, 241);
-   border: dashed 2px rgb(206, 206, 206);
+   height: 200px;
+   background-color: rgba(0, 0, 0, 0.096);
+   border: dashed 2px rgba(165, 165, 165, 0.123);
    border-radius: 30px;
+   box-sizing: border-box;
 }
+
 .mySwiper.bookmark .card h1 {
    padding: 0 30px;
 }

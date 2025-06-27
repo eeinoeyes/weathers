@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrap = styled.div`
    overflow: hidden;
-   min-width: ${(props) => props.$minWidth || '1200px'};
+   min-width: ${(props) => props.$minWidth || '100%'};
 `
 export const Container = styled.div`
    width: 100%;

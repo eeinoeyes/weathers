@@ -49,7 +49,19 @@ function Details() {
    return (
       <Wrap>
          <Header title={weathers?.name} isBookmarked={isBookmarked} toggleBookmark={toggleBookmark} />
-         <Grid container sx={{ maxWidth: '1200px', height: '30vh', margin: '0 auto' }} columns={12} spacing={2} justifyContent="center" alignItems="center">
+         <Grid
+            container
+            sx={{
+               maxWidth: '1200px',
+               width: '100%',
+               height: '30vh',
+               margin: '0 auto',
+            }}
+            columns={12}
+            spacing={2}
+            justifyContent="center"
+            alignItems="center"
+         >
             <Grid sx={{ gridColumn: 'span 1' }}></Grid>
             <Grid sx={5}>
                <img src={`https://openweathermap.org/img/wn/${weathers?.weather[0]?.icon}@4x.png`} alt={weathers?.weather[0].description} />
